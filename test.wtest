@@ -1,0 +1,28 @@
+import example.*
+
+describe "Casos de prueba de etapa 1" {
+  test "Al inicio, Objetos1 tiene un nivel de presencialidad de 100, por lo tanto su reputación es 20" {
+
+    
+    assert.equals(20,  objetos1.puntajeReputacion())
+  }
+  test "Si dicta una clase exitosamente usando Teletuvix, su nivel de presencialidad pasa a ser 240, y su reputación es 34" {
+    objetos1.claseExitosa(teletuvix)
+    assert.equals(34, objetos1.puntajeReputacion())    
+  }
+
+  test "Si luego además falla una clase con 40 estudiantes afectados, su nivel de presencialidad pasa a ser 230, y su reputación es 33" {
+    objetos1.claseExitosa(teletuvix)
+    objetos1.claseFallida(40)
+    assert.equals(33, objetos1.puntajeReputacion())
+  }
+
+  test "Objetos1 al inicio no es copada porque su reputación es menor a 25" {
+    assert.notThat(objetos1.esCopada())
+    
+  }
+  test "objetos1 ahora es copada porque dio una clase exitosa por radiogram" {
+    objetos1.claseExitosa(radiogram)
+    assert.that(objetos1.esCopada())
+  }
+}

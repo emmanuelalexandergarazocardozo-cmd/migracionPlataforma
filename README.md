@@ -53,3 +53,6 @@ Agregar una nueva plataforma (inventada), respetando polimorfismo.
 ## Casos de prueba
 
 Desarrollar distintos casos de prueba para demostrar que funcionan correctamente los métodos.
+![alt text](image.png)
+
+![alt text](image-1.png)
